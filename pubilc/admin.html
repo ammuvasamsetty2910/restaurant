@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f1;
+      margin: 0;
+      color: #333;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #ff6600, #ff3300);
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .admin-page {
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ff5500;
+    }
+
+    .orders-section {
+      margin-bottom: 40px;
+    }
+
+    .orders-section h2 {
+      border-left: 6px solid #ff5500;
+      padding-left: 12px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .order-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .order-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 85, 0, 0.1);
+      padding: 20px;
+      max-width: 320px;
+      transition: 0.3s;
+    }
+
+    .order-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .order-card ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .status {
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .Pending {
+      background-color: #ffe6cc;
+      color: #cc6600;
+    }
+
+    .Accepted {
+      background-color: #fff0cc;
+      color: #cc5500;
+    }
+
+    .Completed {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .Rejected {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    button {
+      padding: 8px 14px;
+      margin: 5px 5px 0 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+
+    .accept-btn {
+      background-color: #ff6600;
+    }
+
+    .reject-btn {
+      background-color: #cc0000;
+    }
+
+    .complete-btn {
+      background-color: #339966;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      .order-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Shouryanga Restaurant - Admin Panel</div>
+
+  <section class="admin-page">
+    <h1>Manage Orders</h1>
+    <div id="ordersList"></div>
+  </section>
+
+  <script>
+    function loadOrders() {
+      const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+
+      const accepted = orders.filter(o => o.status === "Accepted");
+      const pending = orders.filter(o => o.status === "Pending");
+      const completed = orders.filter(o => o.status === "Completed");
+      const rejected = orders.filter(o => o.status === "Rejected");
+
+      const container = document.getElementById("ordersList");
+      container.innerHTML = `
+        ${renderSection("Accepted Orders", accepted)}
+        ${renderSection("Pending Orders", pending)}
+        ${renderSection("Completed Orders", completed)}
+        ${renderSection("Rejected Orders", rejected)}
+      `;
+    }
+
+    function renderSection(title, orders) {
+      if (orders.length === 0) return "";
+
+      return `
+        <div class="orders-section">
+          <h2>${title}</h2>
+          <div class="order-grid">
+            ${orders.map((order, index) => {
+              const allOrders = JSON.parse(localStorage.getItem("orders"));
+              const realIndex = allOrders.findIndex(o => JSON.stringify(o) === JSON.stringify(order));
+              return `
+                <div class="order-card">
+                  <p><strong>Name:</strong> ${order.name}</p>
+                  <p><strong>Mobile:</strong> ${order.mobile}</p>
+                  <ul>
+                    ${order.items.map(item => `<li>${item.name} - ₹${item.price}</li>`).join("")}
+                  </ul>
+                  <p class="status ${order.status}">Status: ${order.status}</p>
+                  ${order.status === "Pending" ? `
+                    <button class="accept-btn" onclick="updateStatus(${realIndex}, 'Accepted')">Accept</button>
+                    <button class="reject-btn" onclick="updateStatus(${realIndex}, 'Rejected')">Reject</button>
+                  ` : ""}
+                  ${order.status === "Accepted" ? `
+                    <button class="complete-btn" onclick="updateStatus(${realIndex}, 'Completed')">Mark Completed</button>
+                  ` : ""}
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function updateStatus(index, status) {
+      const orders = JSON.parse(localStorage.getItem("orders"));
+      orders[index].status = status;
+      localStorage.setItem("orders", JSON.stringify(orders));
+      loadOrders();
+    }
+
+    loadOrders();
+  </script>
+</body>
+</html>

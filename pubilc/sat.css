@@ -1,0 +1,985 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7f0;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b0000;
+    padding: 1rem 2rem;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffcc00;
+  }
+  
+  .shouryanga-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    scroll-margin-top: 60px; /* offset for fixed header */
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    color: #ffcc70;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #f0f0f0;
+  }
+  
+  /* Hover Effect */
+  .hero-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Optional Smooth Scroll Behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Menu Section */
+  .shouryanga-menu {
+    padding: 3rem 2rem;
+    background-color: #fff7f0;
+    text-align: center;
+  }
+  
+  .menu-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #8b0000;
+  }
+  
+  .menu-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .menu-card {
+    background-color: white;
+    width: 260px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  .menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-content h3 {
+    margin: 0.5rem 0;
+    color: #8b0000;
+  }
+  
+  .card-content p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .card-btn {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-btn:hover {
+    background-color: #b22222;
+  }
+  
+  
+  .item {
+    background-color: #fdf1e7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 280px;
+    transition: transform 0.3s;
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+/* About Image Hover Effect */
+.about-image img {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* About Text Card Hover Effect */
+  .about-text {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Optional: Animate heading and strong text */
+  .about-text h2 {
+    transition: color 0.3s ease;
+  }
+  
+  .about-text h2:hover {
+    color: #e85d04;
+  }
+  
+  .about-text strong:hover {
+    color: #ff6600;
+    transition: color 0.3s ease;
+  }
+  
+  
+
+  .shouryanga-gallery {
+    padding: 4rem 2rem;
+    background-color: #fff8ef;
+    text-align: center;
+  }
+  
+  .gallery-title {
+    font-size: 2.2rem;
+    color: #8b0000;
+    margin-bottom: 2rem;
+  }
+  
+  .gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .gallery-item {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1) rotate(1deg);
+  }
+  
+  /* Unique Frame Styles */
+  .frame-round img {
+    border-radius: 50%;
+    border: 5px solid #ffcc70;
+  }
+  
+  .frame-shadow img {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .frame-border img {
+    border: 6px solid #8b0000;
+    border-radius: 12px;
+  }
+  
+  .frame-tilted {
+    transform: rotate(-5deg);
+  }
+  
+  .frame-tilted:hover {
+    transform: rotate(0deg) scale(1.1);
+  }
+  
+  .shouryanga-footer {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    padding: 3rem 2rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-col {
+    flex: 1 1 230px;
+    min-width: 200px;
+  }
+  
+  .footer-col h3,
+  .footer-col h4 {
+    color: #ffcc70;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-col ul li a {
+    text-decoration: none;
+    color: #ccc;
+    display: inline-block;
+    margin: 5px 0;
+    transition: color 0.3s;
+  }
+  
+  .footer-col ul li a:hover {
+    color: #ff6600;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a img:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-newsletter {
+    text-align: center;
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 0 auto 2rem;
+    max-width: 700px;
+  }
+  
+  .footer-newsletter h4 {
+    color: #ffcc70;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+    max-width: 100%;
+  }
+  
+  .footer-newsletter button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #e65c00;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-newsletter form {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-newsletter input[type="email"] {
+      width: 100%;
+    }
+  }
+  .shouryanga-contact {
+    height: 100%;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #ffe8d6, #ffdab9);
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .contact-container {
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #ffffffb2;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  }
+  
+  .contact-info {
+    flex: 1 1 40%;
+  }
+  
+  .contact-info h2 {
+    color: #8b0000;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .contact-form {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.4);
+    outline: none;
+  }
+  
+  .contact-form button {
+    padding: 12px;
+    background-color: #8b0000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #e85d04;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  }
+  .shouryanga-showcase {
+    padding: 4rem 2rem;
+    background-color: #fffaf0;
+    text-align: center;
+  }
+  
+  .showcase-title {
+    font-size: 2.2rem;
+    color: #8b0000;
+    margin-bottom: 2rem;
+  }
+  
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .showcase-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .showcase-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .showcase-img:hover img {
+    transform: scale(1.1);
+    opacity: 0.85;
+    filter: brightness(1.1);
+  }
+  .ds{
+    height: 400px;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+  }
+  
+  .overview-section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .overview-container h1 {
+    font-size: 2.5rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-text {
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .overview-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .overview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .overview-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .overview-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .overview-card h3 {
+    color: #e85d04;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .overview-card p {
+    padding: 0 1.2rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Text Centering */
+  @media (max-width: 768px) {
+    .overview-card p {
+      padding: 0 1rem 1.5rem;
+    }
+  }
+  .read-more-btn {
+    display: inline-block;
+  
+    background-color: #8b0000;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+   
+  }
+  
+  .read-more-btn:hover {
+    background-color: #e85d04;
+    transform: scale(1.05);
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+  }
+  
+  .menu-page {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .menu-page h1 {
+    font-size: 2.5rem;
+    color: #8b0000;
+    margin-bottom: 3rem;
+  }
+  
+  .menu-section {
+    margin-bottom: 4rem;
+  }
+  
+  .menu-section h2 {
+    font-size: 2rem;
+    color: #e85d04;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .menu-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .menu-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .menu-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #8b0000;
+  }
+  
+  .menu-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .menu-card button {
+    margin: 1rem;
+    padding: 10px 18px;
+    background-color: #e85d04;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-card button:hover {
+    background-color: #8b0000;
+  }
+  
+  /* Responsive Fix */
+  @media (max-width: 768px) {
+    .menu-page h1 {
+      font-size: 2rem;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  .readmore-header {
+    background: linear-gradient(to right, #e85d04, #ffb347);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .readmore-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .readmore-section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .readmore-section.alternate {
+    background-color: #ffffff;
+  }
+  
+  .readmore-section h2 {
+    color: #8b0000;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .profile-box img {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-box img:hover {
+    transform: scale(1.05);
+  }
+  
+  .highlight-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .ambience-img {
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .ambience-img:hover {
+    transform: scale(1.02);
+  }
+  
+  .back-home-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 20px;
+    background-color: #8b0000;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background-color: #e85d04;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+  }
+  
+  .about-header {
+    background: linear-gradient(to right, #d62828, #f77f00);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section.alternate {
+    background-color: #fff;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  
+  /* Team Section */
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .team-member {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover img {
+    transform: scale(1.1);
+  }
+  
+  .space-img {
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .space-img:hover {
+    transform: scale(1.02);
+  }
+  
+  .contact {
+    height: 100%;
+    background-color: #976519;
+    padding-bottom: 4rem;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 12px 20px;
+    background-color: #8b0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #e85d04;
+  }
+  .gd{
+    background-color: palevioletred;
+    height: 100%;
+  }
+  
+  .auth-container {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.auth-tabs button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+.auth-form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+.auth-form button {
+    margin: 5px;
+    padding: 10px 20px;
+    background: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.shouryanga-hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}

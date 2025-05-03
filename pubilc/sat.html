@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shouryanga Restaurant</title>
+    <link rel="stylesheet" href="sat.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">Shouryanga</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="shouryanga-hero">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="C:\Users\HP\Desktop\restaurient\restaurant\image\satyas.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to Shouryanga Restaurant</h1>
+            <p>Experience the perfect blend of delicious food, warm hospitality, and cozy ambiance.</p>
+        </div>
+    </section>
+    
+    <section id="menu" class="shouryanga-menu">
+        <h2 class="menu-title">Our Menu</h2>
+        <div class="menu-card-container">
+            <div class="menu-card">
+               <img src="https://farm6.static.flickr.com/5084/5251337321_34ba7bee06_b.jpg"alt="Spicy Chicken Wings">
+                <div class="card-content">
+                    <h3>Spicy Chicken Wings</h3>
+                    <p>Crispy wings tossed in our fiery house sauce.</p>
+                    <button class="card-btn"><a href="readmore.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="menu-card">
+              <img src="https://carveyourcraving.com/wp-content/uploads/2021/10/paneer-tikka-skewers.jpg"alt="Paneer Tikka">
+                <div class="card-content">
+                    <h3>Paneer Tikka</h3>
+                    <p>Grilled paneer cubes infused with Indian spices.</p>
+                    <button class="card-btn"><a href="readmore.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                 <img src="https://daddysbakery.in/wp-content/uploads/2019/01/Choco-Lava-Cake.jpg" alt="Chocolate Lava Cake">
+                <div class="card-content">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Decadent molten chocolate cake served warm.</p>
+                    <button class="card-btn"><a href="readmore.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr_LuKZEw25CN-7rOUUjFLKYpE7oUpmrkQ6A&s"
+                    alt="Veggie Delight Pizza">
+                <div class="card-content">
+                    <h3>Veggie Delight Pizza</h3>
+                    <p>A medley of fresh vegetables on a crispy crust.</p>
+                    <button class="card-btn"><a href="readmore.html" class="read-more-btn">Read More</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4G8AGO8Kfu7YqF-RR4nXbAGJvzbg7WXqZA&s"
+                    alt="Restaurant Interior">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>
+                    At <strong>Shouryanga</strong>, every dish is made with love and the freshest ingredients. Whether
+                    you're here for a
+                    romantic dinner, a family celebration, or a quick bite with friends, we strive to make your
+                    experience unforgettable.
+                </p>
+                <p>
+                    Founded with a passion for traditional flavors and modern presentation, our team of chefs brings
+                    both creativity and
+                    authenticity to the plate. From regional Indian delicacies to international favorites, our menu is
+                    designed to
+                    delight every kind of foodie.
+                </p>
+                <p>
+                    Our ambiance blends rustic charm with contemporary comfort — soft lighting, curated music, and
+                    friendly staff
+                    create a welcoming environment for all.
+                </p>
+                <p>
+                    Come dine with us and discover why Shouryanga has become a favorite dining destination for both
+                    locals and travelers alike.
+                </p>
+                <p><strong>Open Daily:</strong> 11:00 AM – 11:00 PM | <strong>Reservations:</strong> +91 98765 43210</p>
+            </div>
+        </div>
+    </section>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About Shouryanga - Read More</title>
+        <link rel="stylesheet" href="sat.css" />
+    </head>
+
+    <body>
+
+        <section class="overview-section">
+            <div class="overview-container">
+                <h1>About Shouryanga</h1>
+                <p class="intro-text">
+                    Shouryanga Restaurant is more than just a place to eat — it’s a destination where flavors, passion,
+                    and culture meet. From humble beginnings to becoming a local favorite, we’ve always believed in
+                    serving happiness through food.
+                </p>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <img src="c:\Users\HP\Downloads\WhatsApp Image 2025-04-30 at 3.23.59 PM.jpeg" alt="Chef">
+                        <h3>managing director</h3>
+                        <h3>Satyavas</h3>
+                        <p>a managing director in a restaurant setting is responsible for the overall succes of the
+                            business with innovation.</p>
+                    </div>
+
+                    <div class="overview-card">
+                        <img src="c:\Users\HP\Downloads\WhatsApp Image 2025-04-29 at 3.44.32 PM.jpeg" alt="Team">
+                        <h3>chef</h3>
+                        <h3>sanjana</h3>
+                        <p>From chefs to servers, every team member shares a deep commitment to quality, warmth, and
+                            delivering memorable dining experiences every single day.</p>
+                    </div>
+
+                    <div class="overview-card">
+                        <img src="c:\Users\HP\Downloads\WhatsApp Image 2025-04-29 at 3.45.58 PM.jpeg" alt="Story">
+                        <h3>maintenance</h3>
+                        <h3>ratna sri</h3>
+                        <p>they can handle various administrative tasks from managing social media to answering customer
+                        </p>
+
+                    </div>
+                   <div class="overview-card">
+                      <img src="c:\Users\HP\Downloads\WhatsApp Image 2025-04-30 at 10.10.11 AM.jpeg" alt="team">
+                        <h3>secretary</h3>
+                        <h3>varshitha</h3>
+                        <p>they may manage schedules,handle customer enquires,and assist with various paper work.the
+                            specific duties can vary depending on the restaurants size </p>
+                    </div>
+                    <div class="overview-card">
+                        <img src="c:\Users\HP\Downloads\WhatsApp Image 2025-05-02 at 2.25.55 PM.jpeg" alt="team">
+                          <h3>productional manager</h3>
+                          <h3>vyshali</h3>
+                          <p>restaurant production focuses on preparing and serving food effieciantly and effectively encompassing everthing from purchasing to delivary meals to customers</p>
+                      </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </body>
+
+    </html>
+
+
+
+
+    <section class="shouryanga-gallery">
+        <h2 class="gallery-title">Discover Shouryanga Moments</h2>
+        <div class="gallery-wrapper">
+            <div class="gallery-item frame-round">
+                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2" alt="Dish 1">
+            </div>
+            <div class="gallery-item frame-shadow ">
+                <img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp5HCDqkpft8AjiD-2bvXMXKUrwF3GAQJYUQ&s"
+                    alt="Dish 2">
+            </div>
+
+            <div class="gallery-item frame-border">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Dish 3">
+            </div>
+            <div class="gallery-item frame-tilted">
+                <img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBvY4CblDFTiNhbIHopnkmBjJ1mW8J-cvM_Q&s"
+                    alt="Dish 4">
+            </div>
+            <div class="gallery-item frame-round">
+                <img class="ds" src="https://images.unsplash.com/photo-1551218808-94e220e084d2" alt="Dish 1">
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section id="showcase" class="shouryanga-showcase">
+        <h2 class="showcase-title">Our Food & Ambience</h2>
+        <div class="showcase-grid">
+            <div class="showcase-img"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzMVQ_5rRsh9ZOJ1LbqCDdvhaK5Ma5pvR7gA&s">
+            </div>
+            <div class="showcase-img"><img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj3JCAY6Rw7V0MnGfJ-3PtIhbOV4kXMyhTHw&s"
+                    alt="Showcase 2"></div>
+            <div class="showcase-img"><img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv4nwEkYtePBnrw2ofsUUJr6aJY6sSd8tTxQ&s"
+                    alt="Showcase 3"></div>
+            <div class="showcase-img"><img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjcOA7XsqQZ5SBc7ZZJLMnO5vomgDZHluj2Q&s"
+                    alt="Showcase 4"></div>
+            <div class="showcase-img"><img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnuNcR0Sunn9YNRA3EApy4c0RsrRsq5VzXMw&s"
+                    alt="Showcase 5"></div>
+            <div class="showcase-img"><img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR59Dk87U0aOR2ryy-wF08m-gl25efSldgig&s"
+                    alt="Showcase 6"></div>
+            <div class="showcase-img"><img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvShkImsKbqqQ81ubH1Me5O3X-ACkiB-Y4Qw&s"
+                    alt="Showcase 6"></div>
+            <div class="showcase-img"><img class="ds"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm9V_290256F_JdRMHYqCYzsOV8AuaMB6RUw&s"
+                    alt="Showcase 6"></div>
+        </div>
+    </section>
+
+    <section id="auth-section" class="auth-container">
+        <h2>Login / Register</h2>
+        <div class="auth-tabs">
+            <button onclick="switchForm('user')">User</button>
+            <button onclick="switchForm('admin')">Admin</button>
+        </div>
+    
+        <div id="auth-forms">
+            <div id="user-form" class="auth-form">
+                <h3>User Login/Register</h3>
+                <input type="text" id="userEmail" placeholder="Email">
+                <input type="password" id="userPassword" placeholder="Password">
+                <button onclick="register('user')">Register</button>
+                <button onclick="login('user')">Login</button>
+            </div>
+    
+            <div id="admin-form" class="auth-form" style="display: none;">
+                <h3>Admin Login/Register</h3>
+                <input type="text" id="adminEmail" placeholder="Email">
+                <input type="password" id="adminPassword" placeholder="Password">
+                <button onclick="register('admin')">Register</button>
+                <button onclick="login('admin')">Login</button>
+            </div>
+        </div>
+    </section>
+    
+
+   
+
+    <footer class="shouryanga-footer">
+        <div class="footer-container">
+
+            <!-- Column 1: About -->
+            <div class="footer-col">
+                <h3>Shouryanga Restaurant</h3>
+                <p>
+                    Serving love on a plate since 2020. Dive into the taste of authentic recipes,
+                    cozy ambiance, and heartfelt service. Where food meets soul.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">🏠 Home</a></li>
+                    <li><a href="#menu">🍽️ Menu</a></li>
+                    <li><a href="#about">📖 About</a></li>
+                    <li><a href="#contact">📞 Contact</a></li>
+                    <li><a href="#">🛒 Order Online</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>📍 123 Main Street, City, India</p>
+                <p>📞 +91 6304173499</p>
+                <p>📧 satya@23.com</p>
+                <p>🕒 Open: 11 AM – 11 PM</p>
+            </div>
+
+            <!-- Column 4: Follow Us -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111392.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shouryanga Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="sat.js"></script>
+</body>
+
+</html>

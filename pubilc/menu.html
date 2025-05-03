@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Shouryanga</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff6ed;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6b00, #ff922b);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6b00;
+      font-size: 36px;
+      margin: 30px 0 20px;
+    }
+
+    .menu-page {
+      padding: 0 20px 40px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .menu-section {
+      margin-bottom: 40px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .menu-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(255, 107, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 107, 0, 0.15);
+    }
+
+    .menu-card.selected {
+      border-color: #ff6b00;
+      box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.1);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      font-size: 20px;
+      color: #ff6b00;
+      margin: 12px 0 5px;
+    }
+
+    .menu-card p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .menu-card input[type="checkbox"] {
+      display: none;
+    }
+
+    .menu-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .center {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    #buyNow {
+      background: #ff6b00;
+      color: white;
+      padding: 14px 36px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    #buyNow:hover {
+      background: #e85900;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .menu-card {
+        width: 100%;
+      }
+
+      #buyNow {
+        width: 90%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>Shouryanga Restaurant</header>
+
+  <section class="menu-page">
+    <h1>Explore Our Menu</h1>
+
+    <div class="menu-section">
+      <div class="menu-grid">
+        <!-- Menu Cards -->
+        <div class="menu-card">
+          <input type="checkbox" value="Veg Samosa|30" class="menu-check">
+          <img src="https://c.ndtvimg.com/2023-03/0m65kep_samosa_625x300_10_March_23.jpg">
+          <div class="menu-content">
+            <h3>Veg Samosa</h3>
+            <p>₹30</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="sand wich|20" class="menu-check">
+          <img src="https://www.elloras.in/cdn/shop/products/Panner-Tikka-Sandwich.jpg?v=1660235388">
+          <div class="menu-content">
+            <h3>sand wich</h3>
+            <p>₹20</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Chicken Pakora|100" class="menu-check">
+          <img src="https://atanurrannagharrecipe.com/wp-content/uploads/2022/12/Chicken-Pokoda-Photo-01.jpg">
+          <div class="menu-content">
+            <h3>Chicken Pakora</h3>
+            <p>₹100</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Tomato Soup|50" class="menu-check">
+          <img
+            src="https://www.allrecipes.com/thmb/QijITeBBcE99Ur5kDoccAJ35WWo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/277311spicy-fresh-tomato-soupFranceC4x3-56454ad082214f33960f62665fc8c169.jpg">
+          <div class="menu-content">
+            <h3>Tomato Soup</h3>
+            <p>₹50</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Chicken Curry|120" class="menu-check">
+          <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/chicken_curry_61994_16x9.jpg">
+          <div class="menu-content">
+            <h3>Chicken Curry</h3>
+            <p>₹120</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Paneer Butter Masala|110" class="menu-check">
+          <img src="https://madscookhouse.com/wp-content/uploads/2020/10/Paneer-Butter-Masala-Nut-Free-500x500.jpg">
+          <div class="menu-content">
+            <h3>Paneer Butter Masala</h3>
+            <p>₹110</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Dal Tadka|70" class="menu-check">
+          <img src="https://www.scrumptiously.com/wp-content/uploads/2024/10/MoongDalTadka.webp">
+          <div class="menu-content">
+            <h3>Dal Tadka</h3>
+            <p>₹70</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Chicken Biryani|140" class="menu-check">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6AlsY64CMBtlrPiP137YFtHq-asKTix06Q&s">
+          <div class="menu-content">
+            <h3>Chicken Biryani</h3>
+            <p>₹140</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Gulab Jamun|40" class="menu-check">
+          <img src="https://prashantcorner.com/cdn/shop/files/DakGulabJamunSR-2.jpg?v=1718083866">
+          <div class="menu-content">
+            <h3>Gulab Jamun</h3>
+            <p>₹40</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <input type="checkbox" value="Mango Lassi|50" class="menu-check">
+          <img src="https://media.bluediamond.com/uploads/2023/01/24175942/14_Dairy-Free_Mango_Lassi-2430x1620.jpg">
+          <div class="menu-content">
+            <h3>Mango Lassi</h3>
+            <p>₹50</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="garlic bread|80" class="menu-check">
+          <img src="https://maldonsalt.com/wp-content/uploads/2023/09/MALDON_0927-768x1024.jpg">
+          <div class="menu-content">
+            <h3>garlic bread</h3>
+            <p>₹80</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="chilli chicken|110" class="menu-check">
+          <img src="https://www.archanaskitchen.com//images/archanaskitchen/World_Appetizers/chilli-chicken-recipe.jpg">
+          <div class="menu-content">
+            <h3>chilli chicken</h3>
+            <p>₹110</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="pani puri|20" class="menu-check">
+          <img src="https://glenindia.com/a/blog/media/glen-india.myshopify.com/Post/featured_img/pani_puri.jpg">
+          <div class="menu-content">
+            <h3>pani puri</h3>
+            <p>₹20</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="texas roast|200" class="menu-check">
+          <img src="https://www.thecountrycook.net/wp-content/uploads/2024/10/Texas-Toast-French-Dips-10.jpg">
+          <div class="menu-content">
+            <h3>texas roast</h3>
+            <p>₹200</p>
+          </div>
+        </div> <div class="menu-card">
+          <input type="checkbox" value="oreo dessert|100" class="menu-check">
+          <img src="https://recipesfiber.com/wp-content/uploads/2025/03/oreo-tiramisu-trifle-1024x675.webp">
+          <div class="menu-content">
+            <h3>oreo dessert</h3>
+            <p>₹100</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="chocolate macrons|150" class="menu-check">
+          <img src="https://www.onceuponachef.com/images/2022/10/chocolate-macarons-1-500x375.jpg">
+          <div class="menu-content">
+            <h3>chocolate macron</h3>
+            <p>₹150</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="mutton tikka|150" class="menu-check">
+          <img src="https://c8.alamy.com/comp/CY0NYM/mutton-tikka-is-an-indianpakistani-dish-made-by-baking-mutton-which-CY0NYM.jpg">
+          <div class="menu-content">
+            <h3>Mutton tikka</h3>
+            <p>₹150</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="fish fry|50" class="menu-check">
+          <img src="https://nishkitchen.com/wp-content/uploads/2015/04/Chettinad-fish-fry-1B.jpg">
+          <div class="menu-content">
+            <h3>fish fry</h3>
+            <p>₹50</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="prawn fry|50" class="menu-check">
+          <img src="https://images.herzindagi.info/image/2024/May/kerala-prawn-fry-recipe.jpg">
+          <div class="menu-content">
+            <h3>prawn fry</h3>
+            <p>₹50</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <input type="checkbox" value="crab fry|50" class="menu-check">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4lFZPo0JQCkJ_IdnyPmsry8eAB3IY-algQ&s">
+          <div class="menu-content">
+            <h3>crab fry</h3>
+            <p>₹50</p>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="center">
+      <button id="buyNow">Buy Now</button>
+    </div>
+  </section>
+
+  <script>
+    // Card click toggles checkbox and style
+    document.querySelectorAll('.menu-card').forEach(card => {
+      const checkbox = card.querySelector('input[type="checkbox"]');
+      card.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'INPUT') {
+          checkbox.checked = !checkbox.checked;
+          card.classList.toggle('selected', checkbox.checked);
+        }
+      });
+    });
+
+    // Buy Now logic
+    document.getElementById("buyNow").onclick = () => {
+      const selected = [...document.querySelectorAll(".menu-check:checked")].map(cb => {
+        const [name, price] = cb.value.split("|");
+        return { name, price: Number(price) };
+      });
+
+      if (selected.length === 0) return alert("Please select at least one item.");
+
+      const username = prompt("Enter your name:");
+      const mobile = prompt("Enter your mobile number:");
+
+      if (!username || !mobile) {
+        alert("Name and mobile number are required.");
+        return;
+      }
+
+      sessionStorage.setItem("order", JSON.stringify({
+        name: username,
+        mobile,
+        items: selected
+      }));
+
+      location.href = "checkout.html";
+    };
+  </script>
+</body>
+
+</html>

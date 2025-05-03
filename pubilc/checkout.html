@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff6ed;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6b00, #ff922b);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .checkout-page {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.15);
+    }
+
+    .checkout-page h1 {
+      text-align: center;
+      color: #ff6b00;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    #orderDetails {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    #orderDetails ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    #orderDetails li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+    }
+
+    #orderDetails p {
+      margin: 10px 0;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #confirmOrder {
+      background: #ff6b00;
+      color: white;
+      padding: 14px 36px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    #confirmOrder:hover {
+      background: #e85900;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .checkout-page {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      #confirmOrder {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Order Checkout</header>
+  <section class="checkout-page">
+    <h1>Checkout Summary</h1>
+    <div id="orderDetails"></div>
+    <div class="center">
+      <button id="confirmOrder">Confirm Order</button>
+    </div>
+  </section>
+
+  <script>
+    const order = JSON.parse(sessionStorage.getItem("order"));
+    const container = document.getElementById("orderDetails");
+
+    if (!order) {
+      container.innerHTML = "<p>No order found.</p>";
+    } else {
+      let html = `<p><strong>Name:</strong> ${order.name}</p>
+                  <p><strong>Mobile:</strong> ${order.mobile}</p>
+                  <ul>`;
+      let total = 0;
+
+      order.items.forEach(item => {
+        html += `<li>${item.name} - ₹${item.price}</li>`;
+        total += item.price;
+      });
+
+      html += `</ul><p><strong>Total:</strong> ₹${total}</p>`;
+      container.innerHTML = html;
+
+      document.getElementById("confirmOrder").onclick = () => {
+        const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+        orders.push({ ...order, status: "Pending" });
+        localStorage.setItem("orders", JSON.stringify(orders));
+        alert("Order placed successfully!");
+        location.href = "menu.html";
+      };
+    }
+  </script>
+</body>
+</html>
